@@ -1,4 +1,4 @@
-package com.sancho.gbs;
+package com.sancho.ic;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,10 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
  * @since 2017-03-04.
  */
 @Controller
-public class GroupBuyController {
+public class InterestCheckController {
 
-    @GetMapping("/group-buys")
-    public ModelAndView getGroupBuysPage() {
-        return new ModelAndView("gbs/group-buys");
+    @GetMapping("/interest-check")
+    public ModelAndView getInterestCheckPage() {
+        return new ModelAndView("ic/interest-check");
     }
 }

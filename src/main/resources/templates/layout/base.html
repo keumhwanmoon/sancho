@@ -45,38 +45,38 @@
     <div class="row header-content">
 
         <div class="logo">
-            <a href="index.html">Author</a>
+            <a th:href="@{/}">SANCHO</a>
         </div>
 
         <nav id="main-nav-wrap">
             <ul class="main-navigation sf-menu">
-                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/') ? 'current' : ''}"><a href="/" title="">Home</a></li>
-                <li class="has-children">
-                    <a href="category.html" title="">SHOP</a>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/') ? 'current' : ''}"><a href="/" title="Home">Home</a></li>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/shop') ? 'current' : ''}" class="has-children">
+                    <a th:href="@{/shop}" title="SHOP">SHOP</a>
                     <ul class="sub-menu">
-                        <li><a href="category.html">KEYBOARDS</a></li>
-                        <li><a href="category.html">KEYCAPS</a></li>
-                        <li><a href="category.html">ACCESSORIES</a></li>
+                        <li><a th:href="@{/shop?category=KEYBOARDS}">KEYBOARDS</a></li>
+                        <li><a th:href="@{/shop?category=KEYCAPS}">KEYCAPS</a></li>
+                        <li><a th:href="@{/shop?category=ACCESSORIES}">ACCESSORIES</a></li>
                     </ul>
                 </li>
                 <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/group-buys') ? 'current' : ''}" class="has-children">
-                    <a title="GROUP BUYS">GROUP BUYS</a>
+                    <a th:href="@{/group-buys}" title="GROUP BUYS">GROUP BUYS</a>
                     <ul class="sub-menu">
-                        <li><a th:href="@{/group-buys?status='ACTIVE'}">ACTIVE</a></li>
-                        <li><a th:href="@{/group-buys?status='ACTIVE'}">RECENT</a></li>
+                        <li><a th:href="@{/group-buys?status=ACTIVE}">ACTIVE</a></li>
+                        <li><a th:href="@{/group-buys?status=ACTIVE}">RECENT</a></li>
                     </ul>
                 </li>
-                <li class="has-children">
-                    <a href="single-standard.html" title="">INTEREST CHECK</a>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/interest-check') ? 'current' : ''}" class="has-children">
+                    <a th:href="@{/interest-check}" title="INTEREST CHECK">INTEREST CHECK</a>
                     <ul class="sub-menu">
-                        <li><a href="single-video.html">KEYBOARDS</a></li>
-                        <li><a href="single-audio.html">KEYCAPS</a></li>
-                        <li><a href="single-gallery.html">ACCESSORIES</a></li>
+                        <li><a th:href="@{/interest-check?category=KEYBOARDS}">KEYBOARDS</a></li>
+                        <li><a th:href="@{/interest-check?category=KEYCAPS}">KEYCAPS</a></li>
+                        <li><a th:href="@{/interest-check?category=ACCESSORIES}">ACCESSORIES</a></li>
                     </ul>
                 </li>
-                <li><a href="style-guide.html" title="">PHOTOS</a></li>
-                <li><a href="about.html" title="">ABOUT</a></li>
-                <li><a href="style-guide.html" title="">CONTACT</a></li>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/gallery') ? 'current' : ''}"><a th:href="@{/gallery}" title="GALLERY">GALLERY</a></li>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/about') ? 'current' : ''}"><a th:href="@{/about}" title="ABOUT">ABOUT</a></li>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/contact') ? 'current' : ''}"><a th:href="@{/contact}" title="CONTACT">CONTACT</a></li>
             </ul>
         </nav> <!-- end main-nav-wrap -->
 
