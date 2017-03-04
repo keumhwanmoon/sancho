@@ -1,4 +1,4 @@
-package com.sancho.index;
+package com.sancho.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
