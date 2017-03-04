@@ -50,7 +50,7 @@
 
         <nav id="main-nav-wrap">
             <ul class="main-navigation sf-menu">
-                <li class="current"><a href="/" title="">Home</a></li>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/') ? 'current' : ''}"><a href="/" title="">Home</a></li>
                 <li class="has-children">
                     <a href="category.html" title="">SHOP</a>
                     <ul class="sub-menu">
@@ -59,11 +59,11 @@
                         <li><a href="category.html">ACCESSORIES</a></li>
                     </ul>
                 </li>
-                <li class="has-children">
-                    <a href="single-standard.html" title="">GROUP BUYS</a>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/group-buys') ? 'current' : ''}" class="has-children">
+                    <a title="GROUP BUYS">GROUP BUYS</a>
                     <ul class="sub-menu">
-                        <li><a href="single-video.html">ACTIVE</a></li>
-                        <li><a href="single-audio.html">RECENT</a></li>
+                        <li><a th:href="@{/group-buys?status='ACTIVE'}">ACTIVE</a></li>
+                        <li><a th:href="@{/group-buys?status='ACTIVE'}">RECENT</a></li>
                     </ul>
                 </li>
                 <li class="has-children">
