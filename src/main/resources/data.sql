@@ -1,0 +1,1 @@
+INSERT INTO POLL (CATEGORY_CODE, TITLE, BODY) VALUES ('KEYCAP', '국내에서 다시 공제 한다면 꼭 구매할 키캡 세트가 있다면?', '');

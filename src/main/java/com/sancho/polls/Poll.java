@@ -12,7 +12,7 @@ import java.util.List;
  * @since 2017-03-04.
  */
 @Entity
-@Table(name = "INTEREST_CHECK")
+@Table(name = "POLL")
 @Getter
 @Setter
 public class Poll {

@@ -14,12 +14,12 @@
     <div class="row">
         <div class="col-twelve">
 
-            <article class="format-gallery">
+            <article class="format-gallery" th:each="poll : ${polls}">
 
-                <h1 class="entry-title">Hey, This Is a Gallery Format Post.</h1>
+                <h1 class="entry-title" th:text="${poll.title}">Hey, This Is a Gallery Format Post.</h1>
 
                 <ul class="entry-meta">
-                    <li class="date">September 06, 2016</li>
+                    <!--<li class="date" th:text="${#temporals.format(poll.creationDate, 'yyyy-MM-dd')}">September 06, 2016</li>-->
                     <li class="cat"><a href="">Wordpress</a><a href="">Design</a></li>
                 </ul>
 
@@ -40,7 +40,6 @@
                 </div>
 
             </article>
-
 
         </div> <!-- end col-twelve -->
     </div>
