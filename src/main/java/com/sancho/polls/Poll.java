@@ -1,10 +1,11 @@
-package com.sancho.ic;
+package com.sancho.polls;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * @author Jason, Moon
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 @Table(name = "INTEREST_CHECK")
 @Getter
 @Setter
-public class InterestCheck {
+public class Poll {
 
     @Id
     @GeneratedValue
@@ -29,6 +30,9 @@ public class InterestCheck {
 
     @Column(name = "BODY", columnDefinition = "longtext")
     private String body;
+
+    @OneToMany(mappedBy = "poll")
+    private List<PollOption> pollOptionList;
 
     @Column(name = "CRTN_DATE")
     private LocalDateTime creationDate;

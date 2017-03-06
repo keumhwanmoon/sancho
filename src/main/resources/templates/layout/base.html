@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
 
-
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -66,12 +65,12 @@
                         <li><a th:href="@{/group-buys?status=ACTIVE}">RECENT</a></li>
                     </ul>
                 </li>
-                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/interest-check') ? 'current' : ''}" class="has-children">
-                    <a th:href="@{/interest-check}" title="INTEREST CHECK">INTEREST CHECK</a>
+                <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/polls') ? 'current' : ''}" class="has-children">
+                    <a th:href="@{/polls}" title="POLLS">POLLS</a>
                     <ul class="sub-menu">
-                        <li><a th:href="@{/interest-check?category=KEYBOARDS}">KEYBOARDS</a></li>
-                        <li><a th:href="@{/interest-check?category=KEYCAPS}">KEYCAPS</a></li>
-                        <li><a th:href="@{/interest-check?category=ACCESSORIES}">ACCESSORIES</a></li>
+                        <li><a th:href="@{/polls?category=KEYBOARDS}">KEYBOARDS</a></li>
+                        <li><a th:href="@{/polls?category=KEYCAPS}">KEYCAPS</a></li>
+                        <li><a th:href="@{/polls?category=ACCESSORIES}">ACCESSORIES</a></li>
                     </ul>
                 </li>
                 <li th:classappend="${#strings.equals(#httpServletRequest.getRequestURI(), '/gallery') ? 'current' : ''}"><a th:href="@{/gallery}" title="GALLERY">GALLERY</a></li>

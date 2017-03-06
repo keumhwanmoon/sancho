@@ -1,4 +1,4 @@
-package com.sancho.ic;
+package com.sancho.polls;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "INTEREST_CHECK_JOIN")
 @Getter
 @Setter
-public class InterestCheckJoin {
+public class PollJoin {
 
     @Id
     @GeneratedValue
